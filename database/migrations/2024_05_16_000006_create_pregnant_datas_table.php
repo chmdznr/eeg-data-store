@@ -17,6 +17,7 @@ class CreatePregnantDatasTable extends Migration
             $table->integer('age');
             $table->integer('hr')->nullable();
             $table->integer('spo_2')->nullable();
+            $table->integer('resp_count')->nullable();
             $table->integer('sistole')->nullable();
             $table->integer('diastole')->nullable();
             $table->integer('fetal_hr')->nullable();

@@ -46,6 +46,9 @@
                         {{ trans('cruds.pregnantData.fields.spo_2') }}
                     </th>
                     <th>
+                        {{ trans('cruds.pregnantData.fields.resp_count') }}
+                    </th>
+                    <th>
                         {{ trans('cruds.pregnantData.fields.sistole') }}
                     </th>
                     <th>
@@ -60,6 +63,9 @@
                 </tr>
                 <tr>
                     <td>
+                    </td>
+                    <td>
+                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                     </td>
                     <td>
                         <input class="search" type="text" placeholder="{{ trans('global.search') }}">
@@ -157,6 +163,7 @@
 { data: 'age', name: 'age' },
 { data: 'hr', name: 'hr' },
 { data: 'spo_2', name: 'spo_2' },
+{ data: 'resp_count', name: 'resp_count' },
 { data: 'sistole', name: 'sistole' },
 { data: 'diastole', name: 'diastole' },
 { data: 'fetal_hr', name: 'fetal_hr' },

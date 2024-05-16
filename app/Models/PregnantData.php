@@ -27,6 +27,7 @@ class PregnantData extends Model
         'age',
         'hr',
         'spo_2',
+        'resp_count',
         'sistole',
         'diastole',
         'fetal_hr',

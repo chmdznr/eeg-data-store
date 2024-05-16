@@ -64,6 +64,9 @@ class PregnantDataController extends Controller
             $table->editColumn('spo_2', function ($row) {
                 return $row->spo_2 ? $row->spo_2 : '';
             });
+            $table->editColumn('resp_count', function ($row) {
+                return $row->resp_count ? $row->resp_count : '';
+            });
             $table->editColumn('sistole', function ($row) {
                 return $row->sistole ? $row->sistole : '';
             });
