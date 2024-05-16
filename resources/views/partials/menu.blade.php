@@ -15,6 +15,80 @@
                 {{ trans('global.dashboard') }}
             </a>
         </li>
+        @can('pregnant_woman_access')
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/pregnant-datas*") ? "c-show" : "" }} {{ request()->is("admin/pregnant-eegs*") ? "c-show" : "" }}">
+                <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                    <i class="fa-fw fas fa-female c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.pregnantWoman.title') }}
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @can('pregnant_data_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.pregnant-datas.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pregnant-datas") || request()->is("admin/pregnant-datas/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fab fa-500px c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.pregnantData.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('pregnant_eeg_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.pregnant-eegs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/pregnant-eegs") || request()->is("admin/pregnant-eegs/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-bolt c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.pregnantEeg.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+        @endcan
+        @can('newborn_access')
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/newborn-datas*") ? "c-show" : "" }} {{ request()->is("admin/newborn-eegs*") ? "c-show" : "" }} {{ request()->is("admin/newborn-cvs*") ? "c-show" : "" }}">
+                <a class="c-sidebar-nav-dropdown-toggle" href="#">
+                    <i class="fa-fw fas fa-child c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.newborn.title') }}
+                </a>
+                <ul class="c-sidebar-nav-dropdown-items">
+                    @can('newborn_data_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.newborn-datas.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/newborn-datas") || request()->is("admin/newborn-datas/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fab fa-500px c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.newbornData.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('newborn_eeg_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.newborn-eegs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/newborn-eegs") || request()->is("admin/newborn-eegs/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-bolt c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.newbornEeg.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('newborn_cv_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.newborn-cvs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/newborn-cvs") || request()->is("admin/newborn-cvs/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-video c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.newbornCv.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+        @endcan
         @can('user_management_access')
             <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }} {{ request()->is("admin/audit-logs*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
