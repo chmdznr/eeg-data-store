@@ -81,6 +81,16 @@
                 <span class="help-block">{{ trans('cruds.pregnantData.fields.spo_2_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="resp_count">{{ trans('cruds.pregnantData.fields.resp_count') }}</label>
+                <input class="form-control {{ $errors->has('resp_count') ? 'is-invalid' : '' }}" type="number" name="resp_count" id="resp_count" value="{{ old('resp_count', $pregnantData->resp_count) }}" step="1">
+                @if($errors->has('resp_count'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('resp_count') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.pregnantData.fields.resp_count_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label for="sistole">{{ trans('cruds.pregnantData.fields.sistole') }}</label>
                 <input class="form-control {{ $errors->has('sistole') ? 'is-invalid' : '' }}" type="number" name="sistole" id="sistole" value="{{ old('sistole', $pregnantData->sistole) }}" step="1">
                 @if($errors->has('sistole'))

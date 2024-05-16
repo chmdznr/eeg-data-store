@@ -81,6 +81,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.pregnantData.fields.resp_count') }}
+                        </th>
+                        <td>
+                            {{ $pregnantData->resp_count }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.pregnantData.fields.sistole') }}
                         </th>
                         <td>
