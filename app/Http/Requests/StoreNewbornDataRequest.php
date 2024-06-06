@@ -59,6 +59,12 @@ class StoreNewbornDataRequest extends FormRequest
             'thermal' => [
                 'numeric',
             ],
+            'pulse' => [
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
             'spo_2' => [
                 'nullable',
                 'integer',

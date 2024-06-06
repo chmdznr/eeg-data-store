@@ -72,7 +72,7 @@
             </div>
             <div class="form-group">
                 <label for="accel_x">{{ trans('cruds.newbornData.fields.accel_x') }}</label>
-                <input class="form-control {{ $errors->has('accel_x') ? 'is-invalid' : '' }}" type="number" name="accel_x" id="accel_x" value="{{ old('accel_x', $newbornData->accel_x) }}" step="0.01">
+                <input class="form-control {{ $errors->has('accel_x') ? 'is-invalid' : '' }}" type="number" name="accel_x" id="accel_x" value="{{ old('accel_x', $newbornData->accel_x) }}" step="0.000001">
                 @if($errors->has('accel_x'))
                     <div class="invalid-feedback">
                         {{ $errors->first('accel_x') }}
@@ -82,7 +82,7 @@
             </div>
             <div class="form-group">
                 <label for="accel_y">{{ trans('cruds.newbornData.fields.accel_y') }}</label>
-                <input class="form-control {{ $errors->has('accel_y') ? 'is-invalid' : '' }}" type="number" name="accel_y" id="accel_y" value="{{ old('accel_y', $newbornData->accel_y) }}" step="0.01">
+                <input class="form-control {{ $errors->has('accel_y') ? 'is-invalid' : '' }}" type="number" name="accel_y" id="accel_y" value="{{ old('accel_y', $newbornData->accel_y) }}" step="0.000001">
                 @if($errors->has('accel_y'))
                     <div class="invalid-feedback">
                         {{ $errors->first('accel_y') }}
@@ -92,7 +92,7 @@
             </div>
             <div class="form-group">
                 <label for="accel_z">{{ trans('cruds.newbornData.fields.accel_z') }}</label>
-                <input class="form-control {{ $errors->has('accel_z') ? 'is-invalid' : '' }}" type="number" name="accel_z" id="accel_z" value="{{ old('accel_z', $newbornData->accel_z) }}" step="0.01">
+                <input class="form-control {{ $errors->has('accel_z') ? 'is-invalid' : '' }}" type="number" name="accel_z" id="accel_z" value="{{ old('accel_z', $newbornData->accel_z) }}" step="0.000001">
                 @if($errors->has('accel_z'))
                     <div class="invalid-feedback">
                         {{ $errors->first('accel_z') }}
@@ -102,13 +102,23 @@
             </div>
             <div class="form-group">
                 <label for="thermal">{{ trans('cruds.newbornData.fields.thermal') }}</label>
-                <input class="form-control {{ $errors->has('thermal') ? 'is-invalid' : '' }}" type="number" name="thermal" id="thermal" value="{{ old('thermal', $newbornData->thermal) }}" step="0.01">
+                <input class="form-control {{ $errors->has('thermal') ? 'is-invalid' : '' }}" type="number" name="thermal" id="thermal" value="{{ old('thermal', $newbornData->thermal) }}" step="0.000001">
                 @if($errors->has('thermal'))
                     <div class="invalid-feedback">
                         {{ $errors->first('thermal') }}
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.newbornData.fields.thermal_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="pulse">{{ trans('cruds.newbornData.fields.pulse') }}</label>
+                <input class="form-control {{ $errors->has('pulse') ? 'is-invalid' : '' }}" type="number" name="pulse" id="pulse" value="{{ old('pulse', $newbornData->pulse) }}" step="1">
+                @if($errors->has('pulse'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('pulse') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.newbornData.fields.pulse_helper') }}</span>
             </div>
             <div class="form-group">
                 <label for="spo_2">{{ trans('cruds.newbornData.fields.spo_2') }}</label>

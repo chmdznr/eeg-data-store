@@ -105,6 +105,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.newbornData.fields.pulse') }}
+                        </th>
+                        <td>
+                            {{ $newbornData->pulse }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.newbornData.fields.spo_2') }}
                         </th>
                         <td>

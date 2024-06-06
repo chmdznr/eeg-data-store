@@ -30,6 +30,7 @@ class NewbornData extends Model
         'accel_y',
         'accel_z',
         'thermal',
+        'pulse',
         'spo_2',
         'created_at',
         'updated_at',
