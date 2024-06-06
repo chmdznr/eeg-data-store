@@ -55,6 +55,9 @@
                         {{ trans('cruds.newbornData.fields.thermal') }}
                     </th>
                     <th>
+                        {{ trans('cruds.newbornData.fields.pulse') }}
+                    </th>
+                    <th>
                         {{ trans('cruds.newbornData.fields.spo_2') }}
                     </th>
                     <th>
@@ -63,6 +66,9 @@
                 </tr>
                 <tr>
                     <td>
+                    </td>
+                    <td>
+                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                     </td>
                     <td>
                         <input class="search" type="text" placeholder="{{ trans('global.search') }}">
@@ -166,6 +172,7 @@
 { data: 'accel_y', name: 'accel_y' },
 { data: 'accel_z', name: 'accel_z' },
 { data: 'thermal', name: 'thermal' },
+{ data: 'pulse', name: 'pulse' },
 { data: 'spo_2', name: 'spo_2' },
 { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],

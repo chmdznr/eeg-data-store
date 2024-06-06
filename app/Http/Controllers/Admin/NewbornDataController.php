@@ -73,6 +73,9 @@ class NewbornDataController extends Controller
             $table->editColumn('thermal', function ($row) {
                 return $row->thermal ? $row->thermal : '';
             });
+            $table->editColumn('pulse', function ($row) {
+                return $row->pulse ? $row->pulse : '';
+            });
             $table->editColumn('spo_2', function ($row) {
                 return $row->spo_2 ? $row->spo_2 : '';
             });

@@ -16,10 +16,11 @@ class CreateNewbornDatasTable extends Migration
             $table->integer('mother_age');
             $table->integer('gravidity')->nullable();
             $table->integer('parity')->nullable();
-            $table->float('accel_x', 15, 2)->nullable();
-            $table->float('accel_y', 15, 2)->nullable();
-            $table->float('accel_z', 15, 2)->nullable();
-            $table->float('thermal', 15, 2)->nullable();
+            $table->float('accel_x', 15, 6)->nullable();
+            $table->float('accel_y', 15, 6)->nullable();
+            $table->float('accel_z', 15, 6)->nullable();
+            $table->float('thermal', 15, 6)->nullable();
+            $table->integer('pulse')->nullable();
             $table->integer('spo_2')->nullable();
             $table->timestamps();
             $table->softDeletes();
