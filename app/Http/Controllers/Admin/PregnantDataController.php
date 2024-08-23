@@ -43,6 +43,9 @@ class PregnantDataController extends Controller
             $table->editColumn('id', function ($row) {
                 return $row->id ? $row->id : '';
             });
+            $table->editColumn('created_at', function ($row) {
+                return $row->created_at ? $row->created_at : '';
+            });
             $table->editColumn('trial_code', function ($row) {
                 return $row->trial_code ? $row->trial_code : '';
             });

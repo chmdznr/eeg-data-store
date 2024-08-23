@@ -25,6 +25,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.pregnantEeg.fields.created_at') }}
+                        </th>
+                        <td>
+                            {{ $pregnantEeg->created_at }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.pregnantEeg.fields.trial_code') }}
                         </th>
                         <td>
